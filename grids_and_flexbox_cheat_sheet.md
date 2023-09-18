@@ -200,3 +200,89 @@ The standard positioning of items is by source order, however this feature will 
 `align-self: start | center | end | stretch` :
 This determines where on the page the child items will be positioned. Similar to the main flex attributes, start is to the left and end is to the right.
 
+## Example: 
+
+### Grid template area
+HTML Code:
+```html
+<head> 
+
+    <link rel="stylesheet" href="gridta.css"> 
+
+</head> 
+
+ 
+
+<body> 
+
+    <header> Header </header> 
+
+    <nav class="nav-bar"> Navigation </nav> 
+
+    <main> Main area </main> 
+
+    <footer> Footer </footer> 
+
+</body> 
+```
+
+CSS Code:
+```css
+body { 
+
+    display: grid; 
+
+    height: 200px; 
+
+    grid-template-areas: "head head" 
+
+                         "nav  main" 
+
+                         "footer  footer"; 
+
+    grid-template-rows: 30px 1fr 30px; 
+
+    grid-template-columns: 150px 1fr; 
+
+  } 
+
+   
+
+  header { 
+
+    grid-area: head; 
+
+    background-color: lightsalmon; 
+
+  } 
+
+   
+
+  .nav-bar { 
+
+    grid-area: nav; 
+
+    background-color: lightblue; 
+
+  } 
+
+   
+
+  main { 
+
+    grid-area: main; 
+
+    background-color: lightyellow; 
+
+  } 
+
+   
+
+   footer { 
+
+    grid-area: footer; 
+
+    background-color: firebrick; 
+
+  } 
+```
